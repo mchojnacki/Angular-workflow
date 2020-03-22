@@ -1,6 +1,6 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
-  "version": 1, 
+  "version": 1,
   "newProjectRoot": "projects",
   "projects": {
     "workflow": {
@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "workflow"
+    }
+  },
+  "defaultProject": "workflow",
+  "cli": {
+    "analytics": "fa81f133-1304-491d-992c-8a1de2269ac4"
+  }
 }
