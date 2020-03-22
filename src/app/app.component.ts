@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
-import { AngularFireDatabase } from '@angular/fire/database';
-import { Observable } from 'rxjs';
+import {FirebaseService} from './firebase.service';
+//import { AngularFireDatabase } from '@angular/fire/database';
+//import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-root',
@@ -10,16 +11,15 @@ import { Observable } from 'rxjs';
 export class AppComponent {
   title = 'workflow';
 
+ constructor(private firebaseService: FirebaseService){
 
-  itemValue = '';
-  items: Observable<any[]>;
+    this.firebaseService.getData().subscribe(data=>{
+      console.log(data);
+    })
+
+ }
+
  
-  constructor(public db: AngularFireDatabase) {
-    this.items = db.list('disassembly/1').valueChanges();
-  }
-
-
-
 
 
 }
