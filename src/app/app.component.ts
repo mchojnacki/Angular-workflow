@@ -1,7 +1,5 @@
 import { Component } from '@angular/core';
-import {FirebaseService} from './firebase.service';
-//import { AngularFireDatabase } from '@angular/fire/database';
-//import { Observable } from 'rxjs';
+
 
 @Component({
   selector: 'app-root',
@@ -11,11 +9,8 @@ import {FirebaseService} from './firebase.service';
 export class AppComponent {
   title = 'workflow';
 
- constructor(private firebaseService: FirebaseService){
+ constructor(){
 
-    this.firebaseService.getData().subscribe(data=>{
-      console.log(data);
-    })
 
  }
 
